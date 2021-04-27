@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\City;
 use App\Models\Country;
+use App\Models\Email;
 use App\Models\Person;
 use App\Models\Role;
 use App\Models\State;
@@ -24,6 +25,8 @@ class DatabaseSeeder extends Seeder
         $this->call(CountrySeeder::class);
         $this->call(StateSeeder::class);
         $this->call(CitySeeder::class);
+
+        
 
         // Creando los roles de usuario
         Role::insert([
@@ -67,6 +70,8 @@ class DatabaseSeeder extends Seeder
                 'updated_at' => now()
             ],
         );
+
+        Email::factory(40)->create();
 
     }
 }

@@ -19,8 +19,5 @@ class Person extends Model
         return $this->belongsTo(City::class);
     }
 
-    public function emails()
-    {
-        return $this->hasMany(Email::class);
-    }
+   
 }

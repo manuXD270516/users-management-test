@@ -22,8 +22,8 @@ class CreateEmailsTable extends Migration
             $table->string('content');
             $table->string('state');
 
-            $table->foreignId('person_id')
-                ->constrained('people')
+            $table->foreignId('user_id')
+                ->constrained()
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 

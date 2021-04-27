@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 require __DIR__.'/users.php';
+require __DIR__.'/email.php';
 
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
